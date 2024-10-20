@@ -16,13 +16,13 @@ int main()
 	
 	cout << "Enter the name of the student: ";
 	getline(cin, name);
-	cout << "Enter " << name << "'s GPA: ";
+	cout << "\nEnter " << name << "'s GPA: ";
 	cin >> gpa;
 
 	Student studentA(name,gpa);
 	studentA.Display();
 
-	cout << "\n Do You Want to create another student (Y/N)? ";
+	cout << "\n\nDo You Want to create another student (Y/N)? ";
 	string choice;
 	cin >> choice;
 	if (choice == "Y" || choice == "y")
@@ -31,10 +31,10 @@ int main()
 		float g2;
 		
 		cout << "Enter the name of the student: ";
-		std::getline(cin, n2);
-		cout << "Enter " << n2 << "'s GPA: ";
+		cin >> n2;
+		cout << "\nEnter " << n2 << "'s GPA: ";
 		cin >> g2;
-		Student* studentB = new Student;
+		Student* studentB = new Student(n2,g2);
 		studentB->SetName(n2);
 		studentB->SetGpa(g2);
 		studentB->Display();
